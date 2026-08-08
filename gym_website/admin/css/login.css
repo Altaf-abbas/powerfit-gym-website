@@ -1,0 +1,530 @@
+/* ==========================
+   Google Font
+========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ==========================
+   Reset
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    background:#000;
+
+    background-image:
+    linear-gradient(rgba(0,0,0,.82),rgba(0,0,0,.82)),
+    url("../images/gym-bg.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+}
+
+/* ==========================
+   Overlay
+========================== */
+
+.overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.55);
+
+    z-index:1;
+
+}
+
+/* ==========================
+   Container
+========================== */
+
+.login-container{
+
+    position:relative;
+
+    z-index:2;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:30px;
+
+}
+/* ==========================
+   Login Box
+========================== */
+
+.login-box{
+
+    width:430px;
+
+    background:rgba(20,20,20,.85);
+
+    backdrop-filter:blur(15px);
+
+    border:2px solid #d4af37;
+
+    border-radius:20px;
+
+    padding:40px 35px;
+
+    box-shadow:
+    0 0 20px rgba(212,175,55,.25),
+    0 0 50px rgba(212,175,55,.08);
+
+    animation:fadeIn .8s ease;
+
+}
+
+/* ==========================
+   Logo
+========================== */
+
+.logo{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+}
+
+.logo i{
+
+    font-size:65px;
+
+    color:#d4af37;
+
+    margin-bottom:15px;
+
+}
+
+.logo h2{
+
+    color:#fff;
+
+    font-size:30px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+}
+
+.logo p{
+
+    color:#bdbdbd;
+
+    margin-top:8px;
+
+    font-size:15px;
+
+}
+
+/* ==========================
+   Animation
+========================== */
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+/* ==========================
+   Input Fields
+========================== */
+
+.input-box{
+    margin-bottom:22px;
+}
+
+.input-box label{
+    display:block;
+    color:#d4af37;
+    font-size:14px;
+    margin-bottom:8px;
+    font-weight:500;
+}
+
+.input-field{
+    position:relative;
+}
+
+.input-field i{
+    position:absolute;
+    left:18px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#d4af37;
+    font-size:16px;
+}
+
+.input-field input{
+
+    width:100%;
+
+    height:55px;
+
+    padding-left:50px;
+
+    padding-right:50px;
+
+    background:#111;
+
+    border:2px solid #333;
+
+    border-radius:10px;
+
+    color:#fff;
+
+    font-size:15px;
+
+    transition:.3s;
+
+    outline:none;
+
+}
+
+.input-field input::placeholder{
+
+    color:#777;
+
+}
+
+.input-field input:focus{
+
+    border-color:#d4af37;
+
+    box-shadow:0 0 12px rgba(212,175,55,.35);
+
+}
+
+/* ==========================
+   Password Eye
+========================== */
+
+#togglePassword{
+
+    position:absolute;
+
+    right:18px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    cursor:pointer;
+
+    color:#d4af37;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+#togglePassword:hover{
+
+    color:#FFD700;
+
+}
+
+/* ==========================
+   Remember Me
+========================== */
+
+.remember{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin:18px 0 28px;
+
+    font-size:14px;
+
+}
+
+.remember label{
+
+    color:#ddd;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+.remember input{
+
+    accent-color:#d4af37;
+
+}
+
+.remember a{
+
+    color:#d4af37;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.remember a:hover{
+
+    color:#FFD700;
+
+    text-decoration:underline;
+
+}
+
+/* ==========================
+   Login Button
+========================== */
+
+.login-btn{
+
+    width:100%;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#d4af37;
+
+    color:#111;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.login-btn:hover{
+
+    background:#FFD700;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 0 20px rgba(212,175,55,.55);
+
+}
+/* ==========================
+   Footer
+========================== */
+
+.footer{
+
+    margin-top:30px;
+
+    text-align:center;
+
+}
+
+.footer p{
+
+    color:#999;
+
+    font-size:13px;
+
+    letter-spacing:.5px;
+
+}
+
+/* ==========================
+   Hover Effects
+========================== */
+
+.login-box:hover{
+
+    box-shadow:
+    0 0 30px rgba(212,175,55,.35),
+    0 0 60px rgba(212,175,55,.15);
+
+    transition:.4s;
+
+}
+
+/* ==========================
+   Scrollbar
+========================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#d4af37;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#FFD700;
+
+}
+
+/* ==========================
+   Responsive (Tablet)
+========================== */
+
+@media (max-width:768px){
+
+    .login-box{
+
+        width:90%;
+
+        padding:35px 25px;
+
+    }
+
+    .logo i{
+
+        font-size:55px;
+
+    }
+
+    .logo h2{
+
+        font-size:26px;
+
+    }
+
+}
+
+/* ==========================
+   Responsive (Mobile)
+========================== */
+
+@media (max-width:480px){
+
+    .login-container{
+
+        padding:15px;
+
+    }
+
+    .login-box{
+
+        width:100%;
+
+        border-radius:15px;
+
+        padding:30px 20px;
+
+    }
+
+    .logo i{
+
+        font-size:48px;
+
+    }
+
+    .logo h2{
+
+        font-size:22px;
+
+    }
+
+    .input-field input{
+
+        height:50px;
+
+        font-size:14px;
+
+    }
+
+    .login-btn{
+
+        height:50px;
+
+        font-size:15px;
+
+    }
+
+    .remember{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:12px;
+
+    }
+
+}
+
+/* ==========================
+   Dark Selection
+========================== */
+
+::selection{
+
+    background:#d4af37;
+
+    color:#000;
+
+}

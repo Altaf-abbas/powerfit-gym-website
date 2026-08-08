@@ -1,0 +1,1037 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+/* ===========================
+   BODY
+=========================== */
+
+body{
+    background:#0b0b0b;
+    color:#fff;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+    background:rgba(0,0,0,.85);
+    backdrop-filter:blur(8px);
+}
+
+nav{
+    width:90%;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+}
+
+.logo{
+    color:#ff3b3b;
+    font-size:30px;
+    font-weight:700;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:30px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#ff3b3b;
+}
+
+/* ===========================
+   HERO SECTION
+=========================== */
+
+.hero{
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+    url("images/hero.jpg") center/cover no-repeat;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero-content h1{
+    font-size:65px;
+    color:#ff3b3b;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:22px;
+    margin-bottom:30px;
+}
+
+.hero button{
+    padding:15px 40px;
+    border:none;
+    border-radius:40px;
+    background:#ff3b3b;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:.4s;
+}
+
+.hero button:hover{
+    transform:translateY(-5px);
+    background:#ff1111;
+    box-shadow:0 0 25px red;
+}
+
+/* ===========================
+   COMMON SECTION
+=========================== */
+
+section{
+    padding:100px 8%;
+}
+
+section h2{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:50px;
+    color:#ff3b3b;
+}
+
+/* ===========================
+   ABOUT
+=========================== */
+
+.about-box{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#171717;
+    padding:35px;
+    border-radius:15px;
+    text-align:center;
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 20px rgba(255,0,0,.4);
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#ff3b3b;
+}
+
+/* ===========================
+   MEMBERSHIP
+=========================== */
+
+.plans{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.plan{
+    background:#171717;
+    border-radius:15px;
+    padding:35px;
+    text-align:center;
+    transition:.4s;
+}
+
+.plan:hover{
+    transform:scale(1.05);
+}
+
+.plan h1{
+    color:#ff3b3b;
+    margin:20px 0;
+}
+
+.plan button{
+    margin-top:20px;
+    padding:12px 35px;
+    border:none;
+    border-radius:30px;
+    background:#ff3b3b;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.plan button:hover{
+    background:#ff1111;
+}
+
+.premium{
+    border:2px solid red;
+    box-shadow:0 0 20px rgba(255,0,0,.5);
+}
+
+/* ===========================
+   TRAINERS
+=========================== */
+
+.trainer-box{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.trainer{
+    background:#171717;
+    border-radius:15px;
+    overflow:hidden;
+    text-align:center;
+    transition:.4s;
+}
+
+.trainer:hover{
+    transform:translateY(-10px);
+}
+
+.trainer img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+}
+
+.trainer h3{
+    margin-top:20px;
+    color:#ff3b3b;
+}
+
+.trainer p{
+    margin-bottom:20px;
+}
+
+/* ===========================
+   BMI
+=========================== */
+
+.bmi-box{
+    width:450px;
+    max-width:100%;
+    margin:auto;
+    background:#171717;
+    padding:35px;
+    border-radius:15px;
+}
+
+.bmi-box input{
+    width:100%;
+    padding:14px;
+    margin:10px 0;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+}
+
+.bmi-box button{
+    width:100%;
+    padding:14px;
+    margin-top:10px;
+    border:none;
+    border-radius:8px;
+    background:#ff3b3b;
+    color:white;
+    cursor:pointer;
+    font-size:17px;
+}
+
+#result{
+    margin-top:20px;
+    text-align:center;
+    color:#00ff99;
+}
+
+/* ===========================
+   CONTACT
+=========================== */
+
+form{
+    width:550px;
+    max-width:100%;
+    margin:auto;
+}
+
+form input,
+form textarea{
+
+    width:100%;
+    padding:15px;
+    margin-bottom:18px;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+}
+
+form textarea{
+    resize:none;
+    height:150px;
+}
+
+form button{
+
+    width:100%;
+    padding:15px;
+    background:#ff3b3b;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:18px;
+    cursor:pointer;
+}
+
+form button:hover{
+
+    background:#ff1111;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+
+    background:#111;
+    text-align:center;
+    padding:25px;
+    margin-top:50px;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+nav{
+
+flex-direction:column;
+
+}
+
+nav ul{
+
+flex-wrap:wrap;
+justify-content:center;
+margin-top:20px;
+
+}
+
+nav ul li{
+
+margin:10px;
+
+}
+
+.hero-content h1{
+
+font-size:45px;
+
+}
+
+.hero-content p{
+
+font-size:18px;
+
+}
+
+section{
+
+padding:80px 20px;
+
+}
+
+}
+/* ===========================
+   PREMIUM 3D EFFECTS
+=========================== */
+
+#three-container{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    z-index:1;
+}
+
+.hero{
+    position:relative;
+    overflow:hidden;
+    background:#050505 !important;
+}
+
+.hero-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        rgba(0,0,0,.55),
+        rgba(0,0,0,.75)
+    );
+    z-index:2;
+}
+
+.hero-content{
+    position:relative;
+    z-index:5;
+}
+
+.glass{
+    background:rgba(255,255,255,.08) !important;
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.15);
+    box-shadow:0 15px 40px rgba(0,0,0,.4);
+}
+
+.card,
+.plan,
+.trainer,
+.bmi-box,
+form{
+    transition:.5s;
+    transform-style:preserve-3d;
+}
+
+.card:hover,
+.plan:hover,
+.trainer:hover,
+.bmi-box:hover,
+form:hover{
+
+    transform:
+    perspective(1000px)
+    rotateX(8deg)
+    rotateY(-8deg)
+    translateY(-12px);
+
+    box-shadow:
+    0 0 35px rgba(255,59,59,.6),
+    0 0 70px rgba(255,59,59,.25);
+}
+
+.hero h1{
+
+    text-shadow:
+    0 0 15px red,
+    0 0 40px red;
+
+    animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+
+from{
+
+text-shadow:
+0 0 10px red,
+0 0 25px red;
+
+}
+
+to{
+
+text-shadow:
+0 0 20px #ff0000,
+0 0 60px #ff3333,
+0 0 100px #ff5555;
+
+}
+
+}
+
+button{
+
+transition:.4s;
+
+}
+
+button:hover{
+
+transform:
+translateY(-6px)
+scale(1.08);
+
+box-shadow:
+0 0 25px red,
+0 0 45px red;
+
+}
+
+.trainer img{
+
+transition:.5s;
+
+}
+
+.trainer:hover img{
+
+transform:scale(1.08);
+
+}
+
+body{
+
+background:
+radial-gradient(circle at top,#111,#050505);
+
+}
+/* ===== PREMIUM NAVBAR ===== */
+
+header{
+    transition:0.4s ease;
+}
+
+header.scrolled{
+    background:rgba(8,8,8,.95);
+    backdrop-filter:blur(18px);
+    box-shadow:0 10px 30px rgba(255,0,0,.25);
+}
+
+nav ul li a{
+    position:relative;
+}
+
+nav ul li a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0;
+    height:2px;
+    background:#ff3b3b;
+    transition:.35s;
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after{
+    width:100%;
+}
+
+.logo{
+    transition:.4s;
+}
+
+.logo:hover{
+    transform:scale(1.08) rotate(-3deg);
+    text-shadow:0 0 20px #ff3b3b;
+}
+/* ===== LOADER ===== */
+
+#loader{
+    position:fixed;
+    inset:0;
+    background:#050505;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+    transition:1s;
+}
+
+.loader-logo{
+    font-size:70px;
+    animation:bounce 1s infinite alternate;
+}
+
+#loader h1{
+    color:#ff3b3b;
+    margin:20px 0;
+    letter-spacing:6px;
+}
+
+.loading-bar{
+    width:250px;
+    height:8px;
+    background:#222;
+    border-radius:50px;
+    overflow:hidden;
+}
+
+.loading-bar span{
+    display:block;
+    height:100%;
+    width:0%;
+    background:#ff3b3b;
+    animation:loading 2s linear forwards;
+}
+
+@keyframes loading{
+    from{width:0;}
+    to{width:100%;}
+}
+
+@keyframes bounce{
+    from{transform:translateY(0);}
+    to{transform:translateY(-12px);}
+}
+/* ===== FLOATING WHATSAPP ===== */
+
+.whatsapp-float{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    background:#25D366;
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:34px;
+    text-decoration:none;
+    box-shadow:0 0 25px rgba(37,211,102,.6);
+    z-index:9999;
+    transition:.35s;
+}
+
+.whatsapp-float:hover{
+    transform:scale(1.12);
+    box-shadow:0 0 40px rgba(37,211,102,.9);
+}
+/* ===== BACK TO TOP ===== */
+
+#topBtn{
+    position:fixed;
+    bottom:105px;
+    right:25px;
+    width:55px;
+    height:55px;
+    border:none;
+    border-radius:50%;
+    background:#ff3b3b;
+    color:#fff;
+    cursor:pointer;
+    display:none;
+    z-index:9999;
+    font-size:20px;
+    transition:.3s;
+}
+
+#topBtn:hover{
+    transform:scale(1.1);
+}
+/* ===========================
+   WORKOUT PROGRAMS
+=========================== */
+
+.workout-box{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+
+}
+
+.workout-card{
+
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,.15);
+
+padding:35px;
+
+border-radius:20px;
+
+text-align:center;
+
+transition:.5s;
+
+}
+
+.workout-card .icon{
+
+font-size:60px;
+margin-bottom:20px;
+
+}
+
+.workout-card h3{
+
+color:#ff3b3b;
+
+margin-bottom:15px;
+
+font-size:26px;
+
+}
+
+.workout-card p{
+
+line-height:1.9;
+
+color:#ddd;
+
+}
+
+.workout-card:hover{
+
+transform:
+perspective(1000px)
+rotateX(8deg)
+rotateY(-8deg)
+translateY(-15px);
+
+box-shadow:
+0 0 40px rgba(255,59,59,.6);
+
+}
+/* ===========================
+   DARK / LIGHT MODE
+=========================== */
+
+#themeToggle{
+    background:#ff3b3b;
+    color:#fff;
+    border:none;
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    cursor:pointer;
+    font-size:20px;
+    transition:.3s;
+}
+
+#themeToggle:hover{
+    transform:rotate(180deg) scale(1.1);
+}
+
+body.light-mode{
+    background:#f5f5f5;
+    color:#111;
+}
+
+body.light-mode header{
+    background:rgba(255,255,255,.9);
+}
+
+body.light-mode .card,
+body.light-mode .plan,
+body.light-mode .trainer,
+body.light-mode .workout-card,
+body.light-mode .bmi-box,
+body.light-mode form{
+    background:#ffffff !important;
+    color:#111;
+    border:1px solid #ddd;
+}
+
+body.light-mode nav ul li a{
+    color:#111;
+}
+
+body.light-mode footer{
+    background:#e9e9e9;
+    color:#111;
+}
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.gallery-grid img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    border-radius:18px;
+    transition:.4s;
+    cursor:pointer;
+}
+
+.gallery-grid img:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 30px rgba(255,59,59,.5);
+}
+.auth-buttons{
+    display:flex;
+    gap:10px;
+}
+
+.auth-buttons button{
+    padding:10px 20px;
+    border:none;
+    border-radius:30px;
+    background:#ff3b3b;
+    color:#fff;
+    cursor:pointer;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.auth-buttons button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 20px rgba(255,59,59,.6);
+}
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.7);
+    justify-content:center;
+    align-items:center;
+    z-index:10000;
+}
+
+.modal-content{
+    width:350px;
+    background:#111;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+}
+
+.modal-content input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:none;
+    border-radius:8px;
+}
+
+.modal-content button{
+    width:100%;
+    padding:12px;
+    background:#ff3b3b;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.close{
+    float:right;
+    font-size:28px;
+    cursor:pointer;
+    color:white;
+}
+#chatToggle{
+position:fixed;
+bottom:25px;
+left:25px;
+width:65px;
+height:65px;
+border:none;
+border-radius:50%;
+background:#ff3b3b;
+color:#fff;
+font-size:28px;
+cursor:pointer;
+z-index:9999;
+}
+
+#chatbot{
+position:fixed;
+left:25px;
+bottom:100px;
+width:340px;
+background:#111;
+border-radius:15px;
+display:none;
+overflow:hidden;
+box-shadow:0 0 30px rgba(255,0,0,.5);
+z-index:9999;
+}
+
+#chatHeader{
+padding:15px;
+background:#ff3b3b;
+color:#fff;
+font-weight:bold;
+}
+
+#chatMessages{
+height:300px;
+overflow:auto;
+padding:15px;
+}
+
+.bot,
+.user{
+padding:10px;
+margin:8px 0;
+border-radius:10px;
+}
+
+.bot{
+background:#222;
+}
+
+.user{
+background:#ff3b3b;
+text-align:right;
+}
+
+.chatInput{
+display:flex;
+}
+
+.chatInput input{
+flex:1;
+padding:12px;
+border:none;
+outline:none;
+}
+
+.chatInput button{
+padding:12px 18px;
+border:none;
+background:#ff3b3b;
+color:white;
+cursor:pointer;
+}
+/* ================= CHATBOT ================= */
+
+#chatToggle{
+position:fixed;
+bottom:25px;
+right:25px;
+width:60px;
+height:60px;
+border:none;
+border-radius:50%;
+background:#ff3b3b;
+color:#fff;
+font-size:26px;
+cursor:pointer;
+z-index:9999;
+box-shadow:0 0 20px rgba(255,59,59,.5);
+}
+
+#chatbot{
+position:fixed;
+right:25px;
+bottom:95px;
+width:320px;
+height:430px;
+background:#1e1e1e;
+border-radius:15px;
+overflow:hidden;
+display:none;
+z-index:9999;
+box-shadow:0 0 25px rgba(0,0,0,.5);
+}
+
+#chatHeader{
+background:#ff3b3b;
+color:#fff;
+padding:15px;
+font-weight:bold;
+text-align:center;
+}
+
+#chatMessages{
+height:300px;
+overflow-y:auto;
+padding:10px;
+color:white;
+}
+
+.bot{
+background:#333;
+padding:10px;
+margin:8px 0;
+border-radius:10px;
+}
+
+.user{
+background:#ff3b3b;
+padding:10px;
+margin:8px 0;
+border-radius:10px;
+text-align:right;
+}
+
+.chatInput{
+display:flex;
+}
+
+.chatInput input{
+flex:1;
+padding:10px;
+border:none;
+outline:none;
+}
+
+.chatInput button{
+width:80px;
+border:none;
+background:#ff3b3b;
+color:white;
+cursor:pointer;
+}
+.modal{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.7);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+#adminBtn{
+    background: linear-gradient(135deg,#FFD700,#B8860B);
+    color:#000;
+    border:none;
+    padding:12px 28px;
+    border-radius:50px;
+    font-size:16px;
+    font-weight:700;
+    cursor:pointer;
+    transition:0.35s ease;
+    box-shadow:0 0 12px rgba(255,215,0,.45);
+}
+
+#adminBtn:hover{
+    background:#000;
+    color:#FFD700;
+    border:2px solid #FFD700;
+    box-shadow:0 0 20px #FFD700;
+    transform:translateY(-3px) scale(1.05);
+}
+
+#adminBtn:active{
+    transform:scale(.97);
+}

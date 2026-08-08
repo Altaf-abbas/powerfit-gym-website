@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Attendance Management</title>
+
+<link rel="stylesheet" href="css/attendance.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>🏋️ Gym Admin</h2>
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="dashboard.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="members.html">
+                    <i class="fa-solid fa-users"></i>
+                    Members
+                </a>
+            </li>
+
+            <li>
+                <a href="payments.html">
+                    <i class="fa-solid fa-wallet"></i>
+                    Payments
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="attendance.html">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    Attendance
+                </a>
+            </li>
+
+            <li>
+                <a href="logout.html">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Logout
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <div class="topbar">
+
+            <h1>Attendance Management</h1>
+
+            <button class="add-btn">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Mark Attendance
+
+            </button>
+
+        </div>
+
+        <!-- Cards -->
+
+        <div class="cards">
+
+            <div class="card">
+
+                <i class="fa-solid fa-users"></i>
+
+                <h2>120</h2>
+
+                <p>Total Members</p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-user-check"></i>
+
+                <h2>95</h2>
+
+                <p>Present Today</p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-user-xmark"></i>
+
+                <h2>25</h2>
+
+                <p>Absent Today</p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                <h2>79%</h2>
+
+                <p>Attendance</p>
+
+            </div>
+
+        </div>
+
+        <!-- Search -->
+
+        <div class="search-box">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search Member...">
+
+        </div>
+
+        <!-- Attendance Table -->
+
+        <div class="table-box">
+
+            <table id="attendanceTable">
+
+                <thead>
+
+                    <tr>
+
+                        <th>ID</th>
+
+                        <th>Photo</th>
+
+                        <th>Name</th>
+
+                        <th>Date</th>
+
+                        <th>Time In</th>
+
+                        <th>Time Out</th>
+
+                        <th>Status</th>
+
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>101</td>
+
+                        <td>
+                            <img src="https://i.pravatar.cc/45?img=1">
+                        </td>
+
+                        <td>Rahul Sharma</td>
+
+                        <td>06-08-2026</td>
+
+                        <td>07:15 AM</td>
+
+                        <td>09:30 AM</td>
+
+                        <td>
+
+                            <span class="present">
+                                Present
+                            </span>
+
+                        </td>
+
+                        <td>
+
+                            <button class="edit">
+
+                                <i class="fa-solid fa-pen"></i>
+
+                            </button>
+
+                            <button class="delete">
+
+                                <i class="fa-solid fa-trash"></i>
+
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</div>
+
+<!-- Attendance Modal -->
+
+<div class="modal" id="attendanceModal">
+
+<div class="modal-content">
+
+<div class="modal-header">
+
+<h2>
+
+<i class="fa-solid fa-calendar-check"></i>
+
+Mark Attendance
+
+</h2>
+
+<span id="closeModal">&times;</span>
+
+</div>
+
+<div class="form-grid">
+
+<input
+type="text"
+id="memberName"
+placeholder="Member Name">
+
+<input
+type="date"
+id="attendanceDate">
+
+<input
+type="time"
+id="timeIn">
+
+<input
+type="time"
+id="timeOut">
+
+<select id="status">
+
+<option>Present</option>
+
+<option>Absent</option>
+
+<option>Leave</option>
+
+</select>
+
+</div>
+
+<div class="modal-buttons">
+
+<button id="saveAttendance">
+
+Save Attendance
+
+</button>
+
+<button id="closeBtn">
+
+Cancel
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="js/attendance.js"></script>
+
+</body>
+</html>

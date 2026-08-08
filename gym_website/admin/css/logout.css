@@ -1,0 +1,199 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+
+background:#0d0d0d;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+height:100vh;
+
+}
+
+.logout-card{
+
+width:420px;
+
+background:#171717;
+
+border:2px solid #d4af37;
+
+border-radius:20px;
+
+padding:40px;
+
+text-align:center;
+
+box-shadow:0 0 25px rgba(212,175,55,.25);
+
+}
+
+.logout-icon{
+
+font-size:70px;
+
+color:#d4af37;
+
+margin-bottom:20px;
+
+}
+
+.logout-card h1{
+
+color:#d4af37;
+
+margin-bottom:15px;
+
+}
+
+.logout-card p{
+
+color:#ccc;
+
+margin-bottom:30px;
+
+}
+
+.buttons{
+
+display:flex;
+
+gap:15px;
+
+justify-content:center;
+
+}
+
+#logoutBtn{
+
+background:#d4af37;
+
+color:#000;
+
+border:none;
+
+padding:14px 24px;
+
+border-radius:10px;
+
+cursor:pointer;
+
+font-weight:bold;
+
+}
+
+#logoutBtn:hover{
+
+background:#FFD700;
+
+}
+
+#cancelBtn{
+
+background:#ef4444;
+
+color:white;
+
+border:none;
+
+padding:14px 24px;
+
+border-radius:10px;
+
+cursor:pointer;
+
+}
+
+#cancelBtn:hover{
+
+background:#dc2626;
+
+}
+/* ==========================
+   Logout Animation
+========================== */
+
+.logout-animation{
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    background:#000;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    z-index:9999;
+
+}
+
+.logout-animation h2{
+
+    color:#d4af37;
+
+    margin-top:30px;
+
+    font-size:32px;
+
+    letter-spacing:2px;
+
+}
+
+.rocket{
+
+    font-size:90px;
+
+    animation:rocketFly 2.5s ease-in forwards;
+
+}
+
+.rocket{
+
+    font-size:90px;
+
+    animation:rocketFly 1s ease-in forwards;
+
+    will-change: transform;
+
+}
+
+@keyframes rocketFly{
+
+    0%{
+        transform:translateY(250px) scale(.8);
+        opacity:1;
+    }
+
+    10%{
+        transform:translateY(180px) scale(.9);
+    }
+
+    30%{
+        transform:translateY(50px) scale(1);
+    }
+
+    60%{
+        transform:translateY(-350px) scale(1.2);
+    }
+
+    100%{
+        transform:translateY(-1200px) scale(1.6);
+        opacity:0;
+    }
+
+}

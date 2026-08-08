@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Payments</title>
+
+    <link rel="stylesheet" href="css/payments.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <h2>🏋️ Gym Admin</h2>
+
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="dashboard.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="members.html">
+                    <i class="fa-solid fa-users"></i>
+                    Members
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="payments.html">
+                    <i class="fa-solid fa-wallet"></i>
+                    Payments
+                </a>
+            </li>
+
+            <li>
+                <a href="attendance.html">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    Attendance
+                </a>
+            </li>
+
+            <li>
+                <a href="logout.html">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Logout
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <div class="topbar">
+
+            <h1>Payment Management</h1>
+
+            <button class="add-btn">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Add Payment
+
+            </button>
+
+        </div>
+
+        <!-- Cards -->
+
+        <div class="cards">
+
+            <div class="card">
+
+                <i class="fa-solid fa-indian-rupee-sign"></i>
+
+                <h2>₹52,000</h2>
+
+                <p>Total Revenue</p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-credit-card"></i>
+
+                <h2>180</h2>
+
+                <p>Total Payments</p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                <h2>165</h2>
+
+                <p>Paid Members</p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-clock"></i>
+
+                <h2>15</h2>
+
+                <p>Pending Payments</p>
+
+            </div>
+
+        </div>
+
+        <!-- Search -->
+
+        <div class="search-box">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search Payment...">
+
+        </div>
+
+        <!-- Table -->
+
+        <div class="table-box">
+
+            <table id="paymentTable">
+
+                <thead>
+
+                    <tr>
+
+                        <th>ID</th>
+
+                        <th>Member</th>
+
+                        <th>Plan</th>
+
+                        <th>Amount</th>
+
+                        <th>Date</th>
+
+                        <th>Status</th>
+
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>1</td>
+
+                        <td>Rahul Sharma</td>
+
+                        <td>Gold</td>
+
+                        <td>₹3000</td>
+
+                        <td>06-08-2026</td>
+
+                        <td>
+                            <span class="paid">Paid</span>
+                        </td>
+
+                        <td>
+
+                            <button class="edit">
+                                <i class="fa-solid fa-pen"></i>
+                            </button>
+
+                            <button class="delete">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</div>
+
+<!-- Payment Modal -->
+
+<div class="modal" id="paymentModal">
+
+    <div class="modal-content">
+
+        <div class="modal-header">
+
+            <h2>Add Payment</h2>
+
+            <span id="closeModal">&times;</span>
+
+        </div>
+
+        <div class="form-grid">
+
+            <input type="text" id="memberName" placeholder="Member Name">
+
+            <select id="plan">
+
+                <option>Basic</option>
+                <option>Silver</option>
+                <option>Gold</option>
+                <option>Platinum</option>
+
+            </select>
+
+            <input type="number" id="amount" placeholder="Amount">
+
+            <input type="date" id="paymentDate">
+
+            <select id="status">
+
+                <option>Paid</option>
+                <option>Pending</option>
+
+            </select>
+
+        </div>
+        <div class="qr-section">
+
+    <h3>Scan & Pay</h3>
+
+    <img src="qr.png" id="gymQR" alt="Gym QR Code">
+
+    <p id="upiId">6397210041@ptaxis</p>
+
+    <button id="copyUPI">
+
+        <i class="fa-solid fa-copy"></i>
+
+        Copy UPI ID
+
+    </button>
+
+</div>
+
+        <div class="modal-buttons">
+
+            <button id="savePayment">
+
+                Save Payment
+
+            </button>
+
+            <button id="closeBtn">
+
+                Cancel
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/payments.js"></script>
+
+</body>
+</html>

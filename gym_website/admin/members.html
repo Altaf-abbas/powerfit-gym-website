@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Members Management</title>
+    <link rel="stylesheet" href="css/members.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <h2>🏋️ Gym Admin</h2>
+
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="dashboard.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="members.html">
+                    <i class="fa-solid fa-users"></i>
+                    Members
+                </a>
+            </li>
+
+            <li>
+                <a href="payments.html">
+                    <i class="fa-solid fa-wallet"></i>
+                    Payments
+                </a>
+            </li>
+
+            <li>
+                <a href="attendance.html">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    Attendance
+                </a>
+            </li>
+
+            <li>
+                <a href="logout.html">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Logout
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <!-- Header -->
+
+        <div class="topbar">
+
+            <h1>Members Management</h1>
+
+            <button class="add-btn">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Add Member
+
+            </button>
+
+        </div>
+
+        <!-- Search -->
+
+        <div class="search-box">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search Member...">
+
+        </div>
+
+        <!-- Table -->
+
+        <div class="table-box">
+
+            <table id="memberTable">
+
+                <thead>
+
+                    <tr>
+
+                        <th>ID</th>
+
+                        <th>Photo</th>
+
+                        <th>Name</th>
+
+                        <th>Plan</th>
+
+                        <th>Joining</th>
+
+                        <th>Expiry</th>
+
+                        <th>Status</th>
+
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>101</td>
+
+                        <td>
+                            <img src="https://i.pravatar.cc/45?img=1">
+                        </td>
+
+                        <td>Rahul Sharma</td>
+
+                        <td>Gold</td>
+
+                        <td>01-08-2026</td>
+
+                        <td>01-09-2026</td>
+
+                        <td>
+
+                            <span class="active-status">
+
+                                Active
+
+                            </span>
+
+                        </td>
+
+                        <td>
+
+                            <button class="edit">
+
+                                <i class="fa-solid fa-pen"></i>
+
+                            </button>
+
+                            <button class="delete">
+
+                                <i class="fa-solid fa-trash"></i>
+
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>102</td>
+
+                        <td>
+                            <img src="https://i.pravatar.cc/45?img=2">
+                        </td>
+
+                        <td>Aman Khan</td>
+
+                        <td>Silver</td>
+
+                        <td>05-07-2026</td>
+
+                        <td>05-08-2026</td>
+
+                        <td>
+
+                            <span class="expired-status">
+
+                                Expired
+
+                            </span>
+
+                        </td>
+
+                        <td>
+
+                            <button class="edit">
+
+                                <i class="fa-solid fa-pen"></i>
+
+                            </button>
+
+                            <button class="delete">
+
+                                <i class="fa-solid fa-trash"></i>
+
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="members.js"></script>
+<!-- ==========================
+     Add Member Modal
+========================== -->
+
+<div class="modal" id="memberModal">
+
+    <div class="modal-content">
+
+        <div class="modal-header">
+
+            <h2>
+                <i class="fa-solid fa-user-plus"></i>
+                Add New Member
+            </h2>
+
+            <span id="closeModal">&times;</span>
+
+        </div>
+        
+<div class="form-group full-width">
+
+    <label>Profile Photo</label>
+
+    <input
+        type="file"
+        id="memberPhoto"
+        accept="image/*">
+
+    <img
+        id="photoPreview"
+        src="https://via.placeholder.com/120x120?text=Photo"
+        alt="Preview">
+
+</div>
+        <div class="form-grid">
+
+            <div class="form-group">
+
+                <label>Full Name</label>
+
+                <input
+                    type="text"
+                    id="memberName"
+                    placeholder="Enter Full Name">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Mobile Number</label>
+
+                <input
+                    type="text"
+                    id="memberMobile"
+                    placeholder="9876543210">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Email</label>
+
+                <input
+                    type="email"
+                    id="memberEmail"
+                    placeholder="example@gmail.com">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Age</label>
+
+                <input
+                    type="number"
+                    id="memberAge"
+                    placeholder="25">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Gender</label>
+
+                <select id="memberGender">
+
+                    <option value="">Select</option>
+
+                    <option>Male</option>
+
+                    <option>Female</option>
+
+                    <option>Other</option>
+
+                </select>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Membership Plan</label>
+
+                <select id="memberPlan">
+
+                    <option value="">Choose Plan</option>
+
+                    <option>Basic</option>
+
+                    <option>Silver</option>
+
+                    <option>Gold</option>
+
+                    <option>Platinum</option>
+
+                </select>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Fees</label>
+
+                <input
+                    type="number"
+                    id="memberFees"
+                    placeholder="2000">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Payment Status</label>
+
+                <select id="paymentStatus">
+
+                    <option>Paid</option>
+
+                    <option>Pending</option>
+
+                </select>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Joining Date</label>
+
+                <input
+                    type="date"
+                    id="joiningDate">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Expiry Date</label>
+
+                <input
+                    type="date"
+                    id="expiryDate">
+
+            </div>
+
+            <div class="form-group full-width">
+
+                <label>Address</label>
+
+                <textarea
+                    id="memberAddress"
+                    rows="3"
+                    placeholder="Enter Address"></textarea>
+
+            </div>
+
+        </div>
+
+        <div class="modal-buttons">
+
+            <button id="saveMember">
+
+                <i class="fa-solid fa-floppy-disk"></i>
+
+                Save Member
+
+            </button>
+
+            <button id="closeBtn">
+
+                Cancel
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/members.js"></script>
+
+</body>
+
+</html>

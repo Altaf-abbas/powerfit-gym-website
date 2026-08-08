@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PowerFit Gym</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<script src="https://cdn.jsdelivr.net/npm/three@0.166.1/build/three.min.js"></script>
+
+</head>
+
+<body>
+    <a href="https://wa.me/916397210041" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+<button id="topBtn">
+    <i class="fas fa-arrow-up"></i>
+</button>
+<div id="loginModal" class="modal">
+    
+
+    <div class="modal-content">
+
+        <span class="close">&times;</span>
+
+        <h2>Login</h2>
+
+        <input type="email" placeholder="Email">
+
+        <input type="password" placeholder="Password">
+
+        <button>Login</button>
+
+        <p>Don't have an account? <a href="#" id="openSignup">Sign Up</a></p>
+
+    </div>
+</div>
+<!-- ================= SIGNUP MODAL ================= -->
+
+<div id="signupModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close-signup">&times;</span>
+
+        <h2>Create Account</h2>
+
+        <form id="signupForm">
+
+            <!-- ================= STEP 1 ================= -->
+
+            <div id="step1">
+
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Full Name" required>
+                </div>
+
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+
+                <div class="input-group">
+                    <i class="fas fa-phone"></i>
+                    <input type="tel" placeholder="Mobile Number" required>
+                </div>
+
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password" required>
+                </div>
+
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Confirm Password" required>
+                </div>
+
+                <button type="button" id="nextBtn" class="signup-btn">
+                    Next →
+                </button>
+
+            </div>
+
+            <!-- ================= STEP 2 ================= -->
+
+            <div id="step2" style="display:none;">
+
+                <div class="input-group">
+                    <i class="fas fa-birthday-cake"></i>
+                    <input type="number" placeholder="Age" required>
+                </div>
+
+                <div class="input-group">
+                    <i class="fas fa-venus-mars"></i>
+                    <select required>
+                        <option value="">Gender</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <i class="fas fa-ruler-vertical"></i>
+                    <input type="number" placeholder="Height (cm)" required>
+                </div>
+
+                <div class="input-group">
+                    <i class="fas fa-weight"></i>
+                    <input type="number" placeholder="Weight (kg)" required>
+                </div>
+
+                <div class="input-group">
+                    <i class="fas fa-bullseye"></i>
+                    <select required>
+                        <option value="">Fitness Goal</option>
+                        <option>Muscle Gain</option>
+                        <option>Weight Loss</option>
+                        <option>Strength</option>
+                        <option>General Fitness</option>
+                    </select>
+                </div>
+
+                <label class="terms">
+                    <input type="checkbox" required>
+                    I agree to the
+                    <a href="#">Terms & Privacy Policy</a>
+                </label>
+
+                <div style="display:flex;gap:10px;margin-top:20px;">
+
+                    <button type="button" id="backBtn" class="signup-btn" style="background:#555;">
+                        ← Back
+                    </button>
+
+                    <button type="submit" class="signup-btn">
+                        Create Account
+                    </button>
+
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+<!-- ================= NAVBAR ================= -->
+
+<header>
+
+<nav>
+
+<div class="logo">
+
+🏋️ PowerFit
+
+</div>
+<div class="auth-buttons">
+    <button id="loginBtn">Login</button>
+    <button id="signupBtn">Sign Up</button>
+</div>
+<a href="admin/login.html">
+    <button id="adminBtn">Admin</button>
+</a>
+<ul>
+
+<li><a href="#home">Home</a></li>
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#plans">Plans</a></li>
+<li><a href="#workout">Workout</a></li>
+
+<li><a href="#trainers">Trainers</a></li>
+
+<li><a href="#bmi">BMI</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+<button id="themeToggle">
+    🌙
+</button>
+
+</nav>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div id="three-container"></div>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <h1>Transform Your Body</h1>
+
+        <p>
+            Strong Mind.<br>
+            Strong Body.<br>
+            Strong Life.
+        </p>
+
+       <button onclick="window.location.href='explore.html'" class="join-btn">
+    Explore Gym
+</button>
+
+    </div>
+
+</section>
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about" id="about">
+
+<h2>Why Choose PowerFit?</h2>
+
+<div class="about-box">
+
+<div class="card glass">
+
+<h3>Modern Equipment</h3>
+
+<p>
+
+Latest gym machines with professional quality.
+
+</p>
+
+</div>
+
+<div class="card glass">
+
+<h3>Certified Trainers</h3>
+
+<p>
+
+Expert trainers available all day.
+
+</p>
+
+</div>
+
+<div class="card glass">
+
+<h3>Healthy Environment</h3>
+
+<p>
+
+Clean, hygienic and motivating atmosphere.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= MEMBERSHIP ================= -->
+
+<section id="plans" class="glass">
+
+<h2>Membership Plans</h2>
+
+<div class="plans">
+
+<div class="plan">
+
+<h3>Basic</h3>
+
+<h1>₹999</h1>
+
+<p>Gym Access</p>
+
+<p>Locker</p>
+
+<button>Buy</button>
+
+</div>
+
+<div class="plan premium glass">
+
+<h3>Standard</h3>
+
+<h1>₹1999</h1>
+
+<p>Gym + Cardio</p>
+
+<p>Trainer Support</p>
+
+<button>Buy</button>
+
+</div>
+
+<div class="plan">
+
+<h3>Premium</h3>
+
+<h1>₹2999</h1>
+
+<p>Everything Included</p>
+
+<p>Diet Plan</p>
+
+<p>Personal Trainer</p>
+
+<button>Buy</button>
+
+</div>
+
+</div>
+
+</section>
+   <!-- ///// WORKOUT SECTION//// -->
+<section id="workout">
+
+    <h2>Workout Programs</h2>
+
+    <div class="workout-box">
+
+        <div class="workout-card">
+            <div class="icon">💪</div>
+            <h3>Chest</h3>
+            <p>Bench Press<br>Incline Press<br>Cable Fly</p>
+        </div>
+
+        <div class="workout-card">
+            <div class="icon">🏋️</div>
+            <h3>Back</h3>
+            <p>Pull Up<br>Lat Pulldown<br>Barbell Row</p>
+        </div>
+
+        <div class="workout-card">
+            <div class="icon">🦵</div>
+            <h3>Legs</h3>
+            <p>Squat<br>Leg Press<br>Leg Curl</p>
+        </div>
+
+        <div class="workout-card">
+            <div class="icon">💥</div>
+            <h3>Shoulders</h3>
+            <p>Shoulder Press<br>Lateral Raise<br>Front Raise</p>
+        </div>
+
+        <div class="workout-card">
+            <div class="icon">💪</div>
+            <h3>Arms</h3>
+            <p>Biceps Curl<br>Hammer Curl<br>Triceps Pushdown</p>
+        </div>
+
+        <div class="workout-card">
+            <div class="icon">❤️</div>
+            <h3>Cardio</h3>
+            <p>Treadmill<br>Cycling<br>Rowing Machine</p>
+        </div>
+
+    </div>
+
+</section>
+<!-- //////transformaion////////// -->
+<section id="gallery">
+    <h2>Transformation Gallery</h2>
+
+    <div class="gallery-grid">
+
+        <img src="69495fb4c583f8411126e391_joe's.webp">
+        <img src="images2.jpg">
+        <img src="images3.jpg">
+        <img src="images4.jpg">
+        <img src="images5.jpg">
+        <img src="images6.jpg">
+
+    </div>
+</section>
+<!-- ================= TRAINERS ================= -->
+
+<section id="trainers" class="glass">
+
+<h2>Our Trainers</h2>
+
+<div class="trainer-box">
+
+<div class="trainer">
+
+<img src="3K8U7LslDVUgc0HBIh88qrApz0mMO3uTt3jBiE2ljDtJjv8gXb4cRHGPcl553eLPLYfITIZG1-bCdtuTLjG59GFi2SMinlfIxd41zI8mhEEvcJqBT6SR1ttaNeFdIqsCeYS1bV3nL9c-WuGW--jH3EQ0G_ZU2HkSrKu0-qPBS0VUoyIMxa-YWKKQ3I7Ny0-W.jpg">
+
+<h3>Rahul</h3>
+
+<p>Fitness Coach</p>
+
+</div>
+
+<div class="trainer">
+
+<img src="_s6Nt_y6ZtqwSAGDDzrOKP7wHlzImQIj4-C35yDRm1GRFXHoJ_U7SczHRexwYvUcLtSHAjYayge9q1jhkEOJC8f6vmzEDCBWMqYThK5_tmSlofLP0MMOuRzmsKSY6eAghqIa_xbTU1b_H8NnfE0lJxvnWX0a0-h66CCKIITFVtN1Cn1Lr09C2.jpg">
+
+<h3>Aman</h3>
+
+<p>Bodybuilding Coach</p>
+
+</div>
+
+<div class="trainer">
+
+<img src="rxrlAmHFyKKmT8W8S2gvXu354RF6Xzy_su2srsyQn69a1KICvoOVz4ZuG1fP_ph7sJTSNXOwgsAeGuHOnpXcH9uKquY2TxfK56mGpyKuI4pIJe_ux20RdL0Aw_5JDwFE0y85TnqB7kK_pc-B6kVkFwcSwJSx2Ml2NASxZxhPI1escteNL3wGg.jpg">
+
+<h3>Priya</h3>
+
+<p>Yoga Trainer</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= BMI ================= -->
+
+<section id="bmi">
+
+<h2>BMI Calculator</h2>
+
+<div class="bmi-box">
+
+<input type="number" id="height" placeholder="Height (cm)">
+
+<input type="number" id="weight" placeholder="Weight (kg)">
+
+<button onclick="calculateBMI()">
+
+Calculate BMI
+
+</button>
+
+<h3 id="result"></h3>
+
+</div>
+
+</section>
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact">
+    <h2>Contact Us</h2>
+
+    <form id="contactForm">
+        <input
+            type="text"
+            id="name"
+            placeholder="Your Name"
+            required
+        >
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Your Email"
+            required
+        >
+
+        <textarea
+            id="message"
+            placeholder="Your Message"
+            required
+        ></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+
+<p>
+
+© 2026 PowerFit Gym | All Rights Reserved
+
+</p>
+
+</footer>
+<!-- ================= CHATBOT ================= -->
+
+<div id="chatbot">
+
+    <div id="chatHeader">
+        💪 PowerFit AI Coach
+    </div>
+
+    <div id="chatMessages">
+        <div class="bot">
+            Hello 👋<br>
+            Ask me about workouts, diet, BMI, supplements or gym plans.
+        </div>
+    </div>
+
+    <div class="chatInput">
+        <input type="text" id="userInput" placeholder="Ask something...">
+        <button id="sendBtn">Send</button>
+    </div>
+
+</div>
+
+<button id="chatToggle">🤖</button>
+<div id="loader">
+    <div class="loader-logo">🏋️</div>
+    <h1>POWERFIT</h1>
+    <div class="loading-bar">
+        <span></span>
+    </div>
+</div>
+<script src="script.js"></script>
+<!-- <script src="three.js"></script> -->
+</body>
+
+</html>

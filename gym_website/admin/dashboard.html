@@ -1,0 +1,263 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Admin Dashboard</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Chart -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>🏋️ Gym Admin</h2>
+        </div>
+
+        <ul>
+
+            <li class="active">
+                <a href="dashboard.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="members.html">
+                    <i class="fa-solid fa-users"></i>
+                    Members
+                </a>
+            </li>
+
+            <li>
+                <a href="payments.html">
+                    <i class="fa-solid fa-wallet"></i>
+                    Payments
+                </a>
+            </li>
+
+            <li>
+                <a href="attendance.html">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    Attendance
+                </a>
+            </li>
+
+            <li>
+                <a href="logout.html">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Logout
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main -->
+
+    <main class="main-content">
+
+        <!-- Top Navbar -->
+
+        <header class="topbar">
+
+            <h1>Dashboard</h1>
+
+            <div class="right">
+
+                <button id="themeBtn">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <div class="profile">
+
+                    <img src="https://i.pravatar.cc/60" alt="">
+
+                    <span>Admin</span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- Cards -->
+
+        <section class="cards">
+
+            <div class="card">
+
+                <div>
+
+                    <h2 id="members">0</h2>
+
+                    <p>Total Members</p>
+
+                </div>
+
+                <i class="fa-solid fa-users"></i>
+
+            </div>
+
+            <div class="card">
+
+                <div>
+
+                    <h2 id="payments">0</h2>
+
+                    <p>Total Payments</p>
+
+                </div>
+
+                <i class="fa-solid fa-wallet"></i>
+
+            </div>
+
+            <div class="card">
+
+                <div>
+
+                    <h2 id="attendance">0</h2>
+
+                    <p>Today's Attendance</p>
+
+                </div>
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+            </div>
+
+            <div class="card">
+
+                <div>
+
+                    <h2 id="income">₹0</h2>
+
+                    <p>Monthly Income</p>
+
+                </div>
+
+                <i class="fa-solid fa-indian-rupee-sign"></i>
+
+            </div>
+
+        </section>
+
+        <!-- Charts -->
+
+        <section class="chart-section">
+
+            <div class="chart-box">
+
+                <h3>Monthly Revenue</h3>
+
+                <canvas id="revenueChart"></canvas>
+
+            </div>
+
+            <div class="chart-box">
+
+                <h3>Attendance</h3>
+
+                <canvas id="attendanceChart"></canvas>
+
+            </div>
+
+        </section>
+
+        <!-- Recent Members -->
+
+        <section class="table-section">
+
+            <h2>Recent Members</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>ID</th>
+
+                        <th>Name</th>
+
+                        <th>Plan</th>
+
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>101</td>
+
+                        <td>Rahul</td>
+
+                        <td>Gold</td>
+
+                        <td><span class="active-status">Active</span></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>102</td>
+
+                        <td>Aman</td>
+
+                        <td>Silver</td>
+
+                        <td><span class="active-status">Active</span></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>103</td>
+
+                        <td>Javed</td>
+
+                        <td>Premium</td>
+
+                        <td><span class="inactive-status">Expired</span></td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>
+```
